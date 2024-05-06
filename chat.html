@@ -1,0 +1,142 @@
+<!-- UWB Hacks AI MedBot -->
+<!-- Jasleen Kaur Saini, Zaina Shaikh, Anushka Chougule -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBot - Chat</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; 
+            color: #333; 
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #f5f5f5; 
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center;
+        }
+
+        .navbar a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 20px; 
+            margin: 0 10px; 
+        }
+
+        .navbar a:hover {
+            color: #333; 
+        }
+
+        .logo img {
+            width: 150px; 
+            height: auto; 
+            margin-right: 10px; 
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .chat-container {
+            max-width: 450px;
+            min-width: 450px; 
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .chat-box {
+            min-height: 300px;
+            max-height: 300px;
+            overflow-y: scroll;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .message-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-container { 
+            align-self: flex-end;
+        }
+
+        .bot-container {
+            align-self: flex-start;
+        }
+
+        .user-message {
+            background-color:#8FB7BB;
+            padding: 5px 10px;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        #user-input {
+            width: 85%; 
+            border-width: 1px; 
+            border-radius: 7px; 
+           
+        }
+
+        .bot-message {
+            background-color:#f9f9f9;
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin: 5px 0;
+        }
+
+        footer {
+            background-color: #8FB7BB; 
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" class="logo"><img src="MedBot.png" alt="MedBot Logo"></a>
+        <a href="chat.html">Chat AI</a>
+        <a href="symptoms.html">Symptom Information</a>
+        <a href="help.html">Direct Help</a>
+    </div>
+    
+    <div class="content">
+        <h2>Chatbot Interface</h2>
+
+        <div class="chat-container">
+            <div class="chat-box" id="chat-box"></div>
+            <input type="text" id="user-input" placeholder="Enter Symptom" onkeydown="enterKey(event)">
+            
+            <button onclick="clearChat()">Clear</button>
+        </div>
+
+    </div>
+
+    <script src="chat.js"></script>
+    <footer>
+        <p>&copy; 2024 MedBot</p>
+    </footer>
+</body>
+</html>
